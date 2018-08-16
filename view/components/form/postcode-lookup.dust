@@ -1,0 +1,11 @@
+{! This is the postcode lookup form !}
+
+<form action="{data.form_action}" method="post">
+  <div class="input-group">
+    <label for="postcode">{@t key="{data.label}" /}</label>
+    <input type="text" name="postcode" id="postcode" maxlength="8" pattern="[0-9a-zA-Z ]{5,}">
+    <button class="btn--primary" data-tracking="postcode" type="submit">
+      {@t key="{data.button}" /}
+    </button>
+  </div>
+</form>

@@ -1,0 +1,7 @@
+{! This is a minute component !}
+
+<div class="block">
+  {#data.components}
+    {>"components__{name}" name=name data=data/}
+  {/data.components}
+</div>

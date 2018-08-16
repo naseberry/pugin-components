@@ -1,0 +1,8 @@
+{
+  "name": "form__postcode-lookup",
+  "data": {
+    "form_action": "/postcodes/lookup",
+    "label": "search.postcode.label",
+    "button": "search.postcode.button"
+  }
+}
