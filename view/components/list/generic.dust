@@ -1,10 +1,18 @@
 {! The type of the list can be either <ol> or <ul>. !}
 
-<{data.type} {~s}
-  {#data.display}
-    {>"components__{.name}" data=data /}
-  {/data.display}
->
+{! Heading is required by the track component. !}
+{#data.heading}
+  {>"components__heading" data=data /}
+{/data.heading}
+
+
+{?data.type}
+  <{data.type} {~s}
+    {#data.display}
+      {>"components__{.name}" data=data /}
+    {/data.display}
+  >
+{/data.type}
 
 {! This list can loop over an array of components or an array of contents. !}
 
@@ -24,4 +32,4 @@
     {/data.contents}
   {/data.contents}
 
-</{data.type}>
+{?data.type}</{data.type}>{/data.type}

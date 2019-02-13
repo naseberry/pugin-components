@@ -395,6 +395,349 @@
                 }
               ]
             }
+          },
+          {
+            "name": "heading",
+            "data": {
+              "content": "Track",
+              "size": 2
+            }
+          },
+          {
+            "name": "list__generic",
+            "data": {
+              "type": "ul",
+              "display": {
+                "name": "partials__display",
+                "data": [
+                  {
+                    "component": "track"
+                  }
+                ]
+              },
+              "components": [
+                {
+                  "name": "list__generic",
+                  "data": {
+                    "heading": {
+                      "name": "heading",
+                      "data": {
+                        "content": "article.meta.date-published.content",
+                        "size": 3
+                      }
+                    },
+                    "type": "ul",
+                    "display": {
+                      "name": "partials__display",
+                      "data": [
+                        {
+                          "component": "list",
+                          "variant": "block"
+                        }
+                      ]
+                    },
+                    "components": [
+                      {
+                        "name": "card__generic",
+                        "data": {
+                          "paragraph": {
+                            "name": "paragraph",
+                            "data": [
+                              {
+                                "content": "view.components.list.track.instrument-created"
+                              },
+                              {
+                                "content": "view.components.list.track.about-this-stage",
+                                "data": {
+                                  "link": "#"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "list__generic",
+                  "data": {
+                    "heading": {
+                      "name": "heading",
+                      "data": {
+                        "content": "article.meta.date-published.content",
+                        "size": 3
+                      }
+                    },
+                    "type": "ul",
+                    "display": {
+                      "name": "partials__display",
+                      "data": [
+                        {
+                          "component": "list",
+                          "variant": "block"
+                        }
+                      ]
+                    },
+                    "components": [
+                      {
+                        "name": "card__generic",
+                        "data": {
+                          "paragraph": {
+                            "name": "paragraph",
+                            "data": [
+                              {
+                                "content": "view.components.list.track.laid-before-hol"
+                              },
+                              {
+                                "content": "view.components.list.track.about-this-stage",
+                                "data": {
+                                  "link": "#"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "list__generic",
+                  "data": {
+                    "heading": {
+                      "name": "heading",
+                      "data": {
+                        "content": "article.meta.date-published.content",
+                        "size": 3
+                      }
+                    },
+                    "type": "ul",
+                    "display": {
+                      "name": "partials__display",
+                      "data": [
+                        {
+                          "component": "list",
+                          "variant": "block"
+                        }
+                      ]
+                    },
+                    "components": [
+                      {
+                        "name": "card__generic",
+                        "data": {
+                          "paragraph": {
+                            "name": "paragraph",
+                            "data": [
+                              {
+                                "content": "view.components.list.track.laid-before-hoc"
+                              },
+                              {
+                                "content": "view.components.list.track.about-this-stage",
+                                "data": {
+                                  "link": "#"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "name": "card__generic",
+                        "data": {
+                          "paragraph": {
+                            "name": "paragraph",
+                            "data": [
+                              {
+                                "content": "view.components.list.track.objection-period-begins"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "list__generic",
+                  "data": {
+                    "heading": {
+                      "name": "heading",
+                      "data": {
+                        "content": "article.meta.date-published.content",
+                        "size": 3
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "heading",
+            "data": {
+              "content": "Track Alternative",
+              "size": 2
+            }
+          },
+          {
+            "name": "list__generic",
+            "data": {
+              "type": "ul",
+              "display": {
+                "name": "partials__display",
+                "data": [
+                  {
+                    "component": "track",
+                    "variant": "alternative"
+                  }
+                ]
+              },
+              "components": [
+                {
+                  "name": "list__generic",
+                  "data": {
+                    "heading": {
+                      "name": "heading",
+                      "data": {
+                        "content": "article.meta.date-published.content",
+                        "size": 3
+                      }
+                    },
+                    "type": "ul",
+                    "display": {
+                      "name": "partials__display",
+                      "data": [
+                        {
+                          "component": "list",
+                          "variant": "block"
+                        }
+                      ]
+                    },
+                    "components": [
+                      {
+                        "name": "card__generic",
+                        "data": {
+                          "paragraph": {
+                            "name": "paragraph",
+                            "data": [
+                              {
+                                "content": "view.components.list.track.instrument-created"
+                              },
+                              {
+                                "content": "view.components.list.track.about-this-stage",
+                                "data": {
+                                  "link": "#"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "list__generic",
+                  "data": {
+                    "heading": {
+                      "name": "heading",
+                      "data": {
+                        "content": "article.meta.date-published.content",
+                        "size": 3
+                      }
+                    },
+                    "type": "ul",
+                    "display": {
+                      "name": "partials__display",
+                      "data": [
+                        {
+                          "component": "list",
+                          "variant": "block"
+                        }
+                      ]
+                    },
+                    "components": [
+                      {
+                        "name": "card__generic",
+                        "data": {
+                          "paragraph": {
+                            "name": "paragraph",
+                            "data": [
+                              {
+                                "content": "view.components.list.track.laid-before-hol"
+                              },
+                              {
+                                "content": "view.components.list.track.about-this-stage",
+                                "data": {
+                                  "link": "#"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "list__generic",
+                  "data": {
+                    "heading": {
+                      "name": "heading",
+                      "data": {
+                        "content": "article.meta.date-published.content",
+                        "size": 3
+                      }
+                    },
+                    "type": "ul",
+                    "display": {
+                      "name": "partials__display",
+                      "data": [
+                        {
+                          "component": "list",
+                          "variant": "block"
+                        }
+                      ]
+                    },
+                    "components": [
+                      {
+                        "name": "card__generic",
+                        "data": {
+                          "paragraph": {
+                            "name": "paragraph",
+                            "data": [
+                              {
+                                "content": "view.components.list.track.laid-before-hoc"
+                              },
+                              {
+                                "content": "view.components.list.track.about-this-stage",
+                                "data": {
+                                  "link": "#"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "name": "card__generic",
+                        "data": {
+                          "paragraph": {
+                            "name": "paragraph",
+                            "data": [
+                              {
+                                "content": "view.components.list.track.objection-period-begins"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
           }
         ]
       }

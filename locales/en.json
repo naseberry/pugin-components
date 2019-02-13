@@ -6,108 +6,108 @@
       "subheading#1": "Components"
     }
   },
-	"shared": {
-		"meta": {
-			"title": "UK Parliament"
-		},
-		"header": {
-			"skip-to-content": "Skip to main content",
-			"cookie-banner-text": "Parliament.uk uses cookies to make the site simpler. <a href='{{-link}}'>Find out more about cookies</a>",
-			"beta": "beta",
-			"beta-status": "These pages are being tested. <a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/'>Give feedback</a> to help improve them.",
-			"current-website": "Go to <a href='http://www.parliament.uk'>current website</a>",
-			"label": "UK Parliament"
-		},
-		"footer": {
-			"uk-parliament": "UK Parliament",
-			"current-website": "<a href='http://www.parliament.uk'>Current Parliament.uk website</a>",
-			"cookie-policy": "<a href='{{-link}}'>Cookie Policy</a>",
-			"data-protection-privacy": "<a href='https://www.parliament.uk/site-information/data-protection/data-protection-and-privacy-policy/'>Data protection and privacy policy</a>"
-		},
-		"number-navigation": {
-			"previous": "Previous",
-			"next": "Next",
-			"page": "Page "
-		}
-	},
-	"search": {
-		"search-heading": "Search",
-		"label": "Enter a keyword",
-		"search-icon": "Search icon",
-		"new-search": "You are using our new search. We <a href='https://pds.blog.parliament.uk/2018/01/15/switching-off-our-old-search-service/'>switched off the old search</a> on 19 January 2018.",
-		"results-heading": "Search results for",
-		"count": "<span>About {{count}} results</span>",
-		"no-results": "There are no results for your search"
-	},
-	"home": {
-		"beta-website-heading": "UK Parliament beta website",
-		"building-new-website": "We're building a new website for Parliament. Pages with a beta label are being tested and improved. They may not work for everyone.",
-		"follow-beta-progress": "Follow <a href='https://pds.blog.parliament.uk/category/parliament-uk/'>beta progress on our blog</a>.",
-		"mps-and-lords": "MPs and Lords",
-		"mps-heading": "MPs",
-		"find-all-mps": "Find all members of the House of Commons.",
-		"lords-heading": "Lords",
-		"find-all-lords": "View all members of the House of Lords.",
-		"constituencies-heading": "Constituencies",
-		"find-mps-by-area": "Find MPs by the area they represent.",
-		"parties-and-groups-heading": "Parties and groups",
-		"find-members-by-party-or-group": "Find MPs and Lords by their party or group.",
-		"parliament-activity": "Activity in Parliament",
-		"statutory-instruments": "Statutory instruments",
-		"find-all-statutory-instruments": "Find all statutory instruments and follow their progress.",
-		"guides": "Guides",
-		"guide-to-procedure": "MPs Guide to Procedure",
-		"find-guidance": "Guidance on House of Commons procedure for MPs and their staff."
-	},
-	"image": {
-		"image-of": "This is an image of {{image-name}}"
-	},
-	"article": {
-		"heading": {
-			"content": "Article heading",
-			"context": "Context",
-			"subheading": "<a href='#'>Article Type [Article, News, Guidance]</a>"
-		},
-		"summary": {
-			"content-1": "Summary is a brief overview of what the content is about.",
-			"content-2": "If you want to find out what what's happening on a particular day in the Chamber the best way is to look at the Order Paper, which is the daily agenda."
-		},
-		"meta": {
-			"publishers": {
-				"content": "<a href='#'>Name of publisher</a>, <a href='#'>Name of second publisher</a>",
-				"label": "Publisher/s"
-			},
-			"date-published": {
-				"content": "<time datetime='2018-09-18'>18 September 2018</time>",
-				"label": "Date published"
-			},
-			"found-in": {
-				"content": "<a href='#'>Collection 1</a>, <a href='#'>Collection 2</a>",
-				"label": "Found in"
-			}
-		},
-		"figcaption": "Lead image (optional) <a href='#'>example link to resource</a>",
-		"content-body": "<p>You can speak in debates in the Chamber and Westminster Hall. You should be aware of the Rules of behaviour and courtesies in the House, issued by the Speaker, before you do so.</p><p>The House reaches its decisions or highlights its opinions by debating motions. MPs argue for or against a specific motion and then reach a decision, with or without the need for a vote. Motions are listed on the Order Paper, along with the names of the MPs who support them.</p><p>A general motion is neutrally worded. It usually begins, “That this House has considered”. It lets the House discuss an issue without giving an opinion or taking action on it. You can’t amend this kind of motion.</p><p>A substantive motion calls on the House to take action or express an opinion. You can amend a substantive motion.</p><p>Although most motions that are debated are tabled by the Government, there are opportunities for backbenchers to hold debates too:</p><p>The main Opposition parties get a chance to hold debates on their motions on Opposition days.</p>",
-		"list-item-1": "adjournment debates",
-		"list-item-2": "Westminster Hall debates",
-		"list-item-3": "Backbench Business Committee debates",
-		"list-item-4": "emergency debates",
-		"collection-1": {
-			"title": "<a href='#'>Collection one</a>",
-			"article-1": "<a href='#'>Article one</a>",
-			"article-2": "Article header",
-			"article-3": "<a href='#'>Article three</a>"
-		},
-		"collection-2": {
-			"title": "<a href='#'>Collection two</a>",
-			"article-1": "<a href='#'>Article one</a>",
-			"article-2": "<a href='#'>Article two</a>",
-			"article-3": "Article header"
-		},
-		"utilities": {
-			"print": "<a href='#'>Print page</a>",
-			"download": "<a href='#'>Download as PDF</a>"
-		}
+  "shared": {
+    "meta": {
+      "title": "UK Parliament"
+    },
+    "header": {
+      "skip-to-content": "Skip to main content",
+      "cookie-banner-text": "Parliament.uk uses cookies to make the site simpler. <a href='{{-link}}'>Find out more about cookies</a>",
+      "beta": "beta",
+      "beta-status": "These pages are being tested. <a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/'>Give feedback</a> to help improve them.",
+      "current-website": "Go to <a href='http://www.parliament.uk'>current website</a>",
+      "label": "UK Parliament"
+    },
+    "footer": {
+      "uk-parliament": "UK Parliament",
+      "current-website": "<a href='http://www.parliament.uk'>Current Parliament.uk website</a>",
+      "cookie-policy": "<a href='{{-link}}'>Cookie Policy</a>",
+      "data-protection-privacy": "<a href='https://www.parliament.uk/site-information/data-protection/data-protection-and-privacy-policy/'>Data protection and privacy policy</a>"
+    },
+    "number-navigation": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page "
+    }
+  },
+  "search": {
+    "search-heading": "Search",
+    "label": "Enter a keyword",
+    "search-icon": "Search icon",
+    "new-search": "You are using our new search. We <a href='https://pds.blog.parliament.uk/2018/01/15/switching-off-our-old-search-service/'>switched off the old search</a> on 19 January 2018.",
+    "results-heading": "Search results for",
+    "count": "<span>About {{count}} results</span>",
+    "no-results": "There are no results for your search"
+  },
+  "home": {
+    "beta-website-heading": "UK Parliament beta website",
+    "building-new-website": "We're building a new website for Parliament. Pages with a beta label are being tested and improved. They may not work for everyone.",
+    "follow-beta-progress": "Follow <a href='https://pds.blog.parliament.uk/category/parliament-uk/'>beta progress on our blog</a>.",
+    "mps-and-lords": "MPs and Lords",
+    "mps-heading": "MPs",
+    "find-all-mps": "Find all members of the House of Commons.",
+    "lords-heading": "Lords",
+    "find-all-lords": "View all members of the House of Lords.",
+    "constituencies-heading": "Constituencies",
+    "find-mps-by-area": "Find MPs by the area they represent.",
+    "parties-and-groups-heading": "Parties and groups",
+    "find-members-by-party-or-group": "Find MPs and Lords by their party or group.",
+    "parliament-activity": "Activity in Parliament",
+    "statutory-instruments": "Statutory instruments",
+    "find-all-statutory-instruments": "Find all statutory instruments and follow their progress.",
+    "guides": "Guides",
+    "guide-to-procedure": "MPs Guide to Procedure",
+    "find-guidance": "Guidance on House of Commons procedure for MPs and their staff."
+  },
+  "image": {
+    "image-of": "This is an image of {{image-name}}"
+  },
+  "article": {
+    "heading": {
+      "content": "Article heading",
+      "context": "Context",
+      "subheading": "<a href='#'>Article Type [Article, News, Guidance]</a>"
+    },
+    "summary": {
+      "content-1": "Summary is a brief overview of what the content is about.",
+      "content-2": "If you want to find out what what's happening on a particular day in the Chamber the best way is to look at the Order Paper, which is the daily agenda."
+    },
+    "meta": {
+      "publishers": {
+        "content": "<a href='#'>Name of publisher</a>, <a href='#'>Name of second publisher</a>",
+        "label": "Publisher/s"
+      },
+      "date-published": {
+        "content": "<time datetime='2018-09-18'>18 September 2018</time>",
+        "label": "Date published"
+      },
+      "found-in": {
+        "content": "<a href='#'>Collection 1</a>, <a href='#'>Collection 2</a>",
+        "label": "Found in"
+      }
+    },
+    "figcaption": "Lead image (optional) <a href='#'>example link to resource</a>",
+    "content-body": "<p>You can speak in debates in the Chamber and Westminster Hall. You should be aware of the Rules of behaviour and courtesies in the House, issued by the Speaker, before you do so.</p><p>The House reaches its decisions or highlights its opinions by debating motions. MPs argue for or against a specific motion and then reach a decision, with or without the need for a vote. Motions are listed on the Order Paper, along with the names of the MPs who support them.</p><p>A general motion is neutrally worded. It usually begins, “That this House has considered”. It lets the House discuss an issue without giving an opinion or taking action on it. You can’t amend this kind of motion.</p><p>A substantive motion calls on the House to take action or express an opinion. You can amend a substantive motion.</p><p>Although most motions that are debated are tabled by the Government, there are opportunities for backbenchers to hold debates too:</p><p>The main Opposition parties get a chance to hold debates on their motions on Opposition days.</p>",
+    "list-item-1": "adjournment debates",
+    "list-item-2": "Westminster Hall debates",
+    "list-item-3": "Backbench Business Committee debates",
+    "list-item-4": "emergency debates",
+    "collection-1": {
+      "title": "<a href='#'>Collection one</a>",
+      "article-1": "<a href='#'>Article one</a>",
+      "article-2": "Article header",
+      "article-3": "<a href='#'>Article three</a>"
+    },
+    "collection-2": {
+      "title": "<a href='#'>Collection two</a>",
+      "article-1": "<a href='#'>Article one</a>",
+      "article-2": "<a href='#'>Article two</a>",
+      "article-3": "Article header"
+    },
+    "utilities": {
+      "print": "<a href='#'>Print page</a>",
+      "download": "<a href='#'>Download as PDF</a>"
+    }
   },
   "view": {
     "components": {
@@ -153,6 +153,13 @@
           "list-7": "<a href='{{-link}}'>House of Commons</a>",
           "term-8": "Upper House",
           "list-8": "<a href='{{-link}}'>House of Lords</a>"
+        },
+        "track": {
+          "instrument-created": "Instrument created",
+          "laid-before-hoc": "Laid before the House of Commons",
+          "laid-before-hol": "Laid before the House of Lords",
+          "objection-period-begins": "Objection period begins",
+          "about-this-stage": "<a href='{{-link}}'>Find out more about this stage</a>"
         }
       },
       "navigation": {
