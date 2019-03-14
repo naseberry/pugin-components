@@ -1,0 +1,9 @@
+blockquote {
+  margin-left: 0;
+  padding-left: $base-spacing-unit-small;
+  border-left: $base-spacing-unit solid $grey-3;
+}
+
+mark {
+  background-color: $grey-3;
+}

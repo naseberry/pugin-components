@@ -1,0 +1,16 @@
+// Variables inherited from 'settings/_spacing.scss' and 'settings/_colours.scss'
+
+header {
+  .logo {
+    width: auto;
+    height: 48px;
+    color: $deep-purple;
+    margin-bottom: 0;
+    text-decoration: none;
+  }
+  @include media($medium) {
+    .logo {
+      height: 54px;
+    }
+  }
+}

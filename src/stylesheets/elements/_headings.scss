@@ -1,0 +1,230 @@
+/*--- Base Heading Settings ---*/
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  font-weight: 500;
+  color: $deep-purple;
+  margin-bottom: $base-spacing-unit;
+  margin-top: $base-spacing-unit-medium;
+  @include media($medium) {
+    margin-top: $base-spacing-unit-large;
+  }
+  &.lead {
+    @extend .lead;
+  }
+}
+
+/*--- Heading Settings ---*/
+
+h1, .alpha {
+  @include alpha;
+  margin-bottom: $base-spacing-unit-large;
+  margin-top: $base-spacing-unit-extra-large;
+
+  @include media($medium) {
+    margin-bottom: $base-spacing-unit-extra-large;
+    margin-top: round($base-spacing-unit * 7);
+  }
+}
+h2, .beta {
+  @include beta;
+  margin-bottom: $base-spacing-unit-tiny;
+  margin-top: $base-spacing-unit-extra-large;
+
+  @include media($medium) {
+    margin-bottom: $base-spacing-unit-small;
+    margin-top: round($base-spacing-unit * 7);
+  }
+}
+h3, .gamma {
+  @include gamma;
+  margin-bottom: $base-spacing-unit-tiny;
+  margin-top: $base-spacing-unit-medium;
+
+  @include media($medium) {
+    margin-bottom: $base-spacing-unit-tiny;
+    margin-top: $base-spacing-unit-large;
+  }
+}
+h4, .delta {
+  @include delta;
+  margin-bottom: $base-spacing-unit;
+  margin-top: $base-spacing-unit-medium;
+
+  @include media($medium) {
+    margin-bottom: $base-spacing-unit;
+    margin-top: $base-spacing-unit-large;
+  }
+}
+h5, h6, .epsilon {
+  @include epsilon;
+  line-height: 1.167; // 21px
+  margin-bottom: $base-spacing-unit;
+  margin-top: $base-spacing-unit-medium;
+
+  @include media($medium) {
+    line-height: 1.2; // 24px
+    margin-bottom: $base-spacing-unit;
+    margin-top: $base-spacing-unit-large;
+  }
+}
+
+/*--- Heading Nested Elements ---*/
+
+h1 {
+  @include last-child;
+}
+
+h1 span {
+  display: block;
+}
+
+h1 .context {
+  @include summary;
+  margin-bottom: $base-spacing-unit-extra-large;
+}
+
+/*--- Headers Settings ---*/
+
+article header h1 {
+  margin-bottom: $base-spacing-unit-large;
+}
+
+/*--- Footers Settings ---*/
+
+footer h2 {
+  @extend .epsilon;
+}
+
+article footer h2 {
+  @extend .beta;
+}
+
+article footer:first-of-type {
+  @include first-child;
+}
+
+body > footer h2 {
+  color: $grey-5;
+  margin-top: $base-spacing-unit-medium;
+  margin-bottom: $base-spacing-unit-tiny;
+}
+
+/*--- Component Settings ---*/
+
+.block,
+.hero {
+  h1 {
+    position: relative;
+    margin-bottom: $base-spacing-unit-large;
+  }
+  h1:after {
+    @extend .line-break--lg;
+    left: 0;
+    content: '';
+    position: absolute;
+    bottom: - $base-spacing-unit-extra-large;
+  }
+}
+
+/*--- List Events ---*/
+
+.list--events > li > {
+  h2, h3, h4, h5, h6 {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    @include gamma;
+    background-color: $grey-5;
+    padding: $base-spacing-unit-tiny 0;
+    margin-bottom: 0;
+  }
+}
+
+.list--events > li > ol,
+.list--events > li > ul {
+  h2, h3, h4, h5, h6 {
+    @include typography--light;
+  }
+}
+
+/*--- Track Timelines ---*/
+
+.track > {
+  li > {
+    h2, h3, h4, h5, h6 {
+      position: relative;
+      color: $grey-1;
+      line-height: 1.667; // 30px
+      @include epsilon;
+      &:before {
+        z-index: 1;
+        left: -24px;
+        width: 11px;
+        content: '';
+        height: 11px;
+        margin-top: 6px;
+        border-radius: 50%;
+        position: absolute;
+        vertical-align: top;
+        top: 4px;
+        background-color: $grey-1;
+      }
+    }
+    h2 + h2, h3 + h3, h4 + h4, h5 + h5 {
+      margin-top: $base-spacing-unit-large;
+    }
+  }
+  li:first-child > {
+    h2, h3, h4, h5, h6 {
+      margin-top: 0;
+    }
+  }
+}
+
+/*--- Articles & Blocks ---*/
+
+.section--primary .container,
+.hero .container,
+article header,
+[role='main'] {
+  @include headings-margin-top(0);
+  h1:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.block {
+  @include headings-margin-top(0);
+  h1:first-of-type {
+    margin-top: 0;
+  }
+}
+
+/*--- Sidebar Settings ---*/
+
+article + aside > h2 {
+  color: $white;
+  @include delta;
+  background-color: $deep-purple--light;
+  padding: $base-spacing-unit-small;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+article aside h2 {
+  @include epsilon;
+  @include typography--light;
+}
+
+/*--- Card styles ---*/
+
+.card,
+.card--large,
+.card--small {
+  h2, h3, h4, h5, h6 {
+    @include epsilon;
+    flex-basis: 100%;
+    color: $grey-1;
+  }
+}

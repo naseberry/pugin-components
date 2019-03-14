@@ -1,0 +1,95 @@
+/*--- Base SVG ---*/
+
+svg {
+  pointer-events: none;
+  vertical-align: middle;
+}
+
+/*--- UK Parliament Icon ---*/
+
+header .uk_parliament g {
+  fill: $white;
+}
+
+@media (max-width: $medium - 1) {
+  .uk_parliament {
+    z-index: 1;
+    margin-right: $base-spacing-unit-tiny;
+    position: relative;
+  }
+  &.portcullis {
+    width: 48px;
+    min-width: 48px;
+    overflow: hidden;
+  }
+}
+
+/*--- File Icon ---*/
+
+svg [data-icon="file"] {
+  [data-icon="success"], [data-icon="failure"], [data-icon="word"], [data-icon="pdf"] {
+    display: none;
+  }
+}
+
+/*--- File Icon [types] ---*/
+
+.svg--file__word svg [data-icon="word"],
+.svg--file__pdf svg [data-icon="pdf"],
+.svg--file__success svg,
+.svg--file__failure svg,
+[data-file-upload="success"] svg [data-icon="success"],
+[data-file-upload="failure"] svg [data-icon="failure"] {
+  display: block;
+}
+
+main [class*="btn"] svg {
+  width: 20px;
+  height: 20px;
+  margin-left: -4px;
+}
+
+/*--- List Styles ---*/
+
+/* Adding space between the right of an SVG and the
+left of its sibling. SVG left spacing not required
+because our design pattern is to have SVGs on the
+left hand side. */
+[class*="list"] svg + * {
+  margin-left: $base-spacing-unit;
+}
+
+/*--- Card Styles ---*/
+
+[class*="card"] figure svg {
+  width: 100%;
+  height: 100%;
+}
+
+/*--- Header Search ---*/
+
+header form + a svg {
+  top: 15px;
+  position: absolute;
+
+  &[data-icon="search"] g {
+    fill: $white;
+  }
+
+  &[data-icon="close"] {
+    opacity: 0;
+
+    g {
+      stroke: $white;
+    }
+  }
+}
+
+header form.open + a svg {
+  &[data-icon="close"] {
+    opacity: 1;
+  }
+  &[data-icon="search"] {
+    opacity: 0;
+  }
+}

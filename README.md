@@ -40,7 +40,7 @@ To run the application locally, run:
 ```bash
 make develop
 ```
-This runs foreman that starts the app and shunter erve
+This runs foreman that starts the app, shunter serve and watches for changes in the src directory.
 
 The application should now be available at [http://localhost:5500][local].
 
@@ -63,19 +63,6 @@ const app = shunter({
 });
 ```
 You should now be able to call on the components as if they were in a view folder in your root directory.
-
-## Updating versions of Pugin assets (CSS/JS)
-The `make build` task compiles the css and javascript assets from [Pugin][pugin]. This task is used when you would like to specify a different tag release of [Pugin][pugin] as to what was originally installed.
-
-For example, in the package.json amend `parliamentuk-pugin` to another tag release:
-```bash
-"parliamentuk-pugin": "git+https://github.com/ukparliament/parliament.uk-pugin.git#1.11.3",
-```
-then run:
-```bash
-"make build"
-```
-After which you then run `npm update` in your local application.
 
 ## Running tests on single files or directories
 The `npm run testfocus` command will let you specify a directory or file of tests to be run.

@@ -1,0 +1,22 @@
+/*--- Hints ---*/
+
+.hint {
+  @include hint;
+}
+
+.hint[class*="theme--"] {
+  box-shadow: none;
+}
+
+/*--- List & URLs ---*/
+
+.hint,
+.url {
+  margin-right: $base-spacing-unit;
+  padding: 0 $base-spacing-unit;
+}
+.url {
+  word-break: break-all;
+  padding-left: 0;
+}
+

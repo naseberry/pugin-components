@@ -1,0 +1,117 @@
+audio {
+  width: 100%;
+}
+
+video {
+  height: auto;
+  width: 100%;
+}
+
+picture {
+  background-color: $grey-4;
+  display: block;
+  min-height: 30px;
+  width: 100%;
+}
+
+img {
+  color: $grey-4;
+  display: block;
+  font-size: 0; // to remove the alt text underline
+  width: 100%;
+}
+
+// SVG specific for all lists
+[class*="list--"] li .svg--icon {
+  background-color: transparent;
+  svg {
+    display: block;
+  }
+}
+
+/*--- Figure ---*/
+
+article > figure {
+
+  @include container;
+  @include section-offset;
+}
+
+figcaption {
+  @include micro;
+  margin-top: 0;
+  color: $grey-2;
+  @include border-bottom;
+  background-color: $grey-5;
+  padding: $base-spacing-unit-tiny 0;
+}
+
+.loading {
+  position: absolute;
+  margin: 2px ($base-spacing-unit-tiny / 2);
+  @-webkit-keyframes spinner {
+    from {
+      -webkit-transform: rotate(0);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes spinner {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @include css-animation(.8s, linear, 0s, infinite, spinner);
+}
+
+.video-wrap, // TODO: remove after release of parliament.uk-things
+.video--wrapper {
+  margin-bottom: $base-spacing-unit-large;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    padding-top: (9 / 16) * 100%; // 16:9 aspect ratio
+    width: 100%;
+  }
+  video,
+  iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+/*--- Section Specific Styles ---*/
+
+.section--primary {
+  img+h1 {
+    margin-bottom: $base-spacing-unit-tiny / 2;
+  }
+  img~p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/*--- Card styles ---*/
+
+.card {
+  @include figure;
+  @include avatar--round;
+}
+
+.card--small {
+  @include figure("small");
+  @include avatar--round("small");
+}
+
+.card--large {
+  @include figure("large");
+  @include avatar--round("large");
+}

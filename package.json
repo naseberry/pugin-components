@@ -4,6 +4,7 @@
   "description": "A shunter npm package containing dust components for beta.parliament.uk",
   "main": "app.js",
   "scripts": {
+    "postinstall": "make build",
     "test": "NODE_ENV=test node ./node_modules/nyc/bin/nyc.js --reporter=lcov ./node_modules/mocha/bin/mocha --recursive test",
     "testfocus": "NODE_ENV=test ./node_modules/mocha/bin/mocha --recursive",
     "start": "node app.js -s --compile-on-demand",
@@ -24,6 +25,7 @@
     "autoprefixer": "^9.4.7",
     "callsites": "^3.0.0",
     "chai": "^4.2.0",
+    "chokidar": "^2.1.1",
     "codeclimate-test-reporter": "^0.5.1",
     "coveralls": "^3.0.2",
     "cssnano": "^4.1.8",
@@ -34,6 +36,7 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
+    "imagemin-cli": "^4.0.1",
     "js-beautify": "^1.8.9",
     "jsdoc": "^3.5.5",
     "leaflet": "^1.4.0",
@@ -48,6 +51,7 @@
     "postcss-cli": "^6.1.1",
     "sinon": "^7.2.3",
     "sinon-chai": "^3.3.0",
+    "svgo": "^1.2.0",
     "uglify-js": "^3.4.9",
     "walk-sync": "^1.1.2"
   },

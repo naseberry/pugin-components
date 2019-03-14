@@ -1,0 +1,40 @@
+/*--- Article Styles ---*/
+
+article {
+  position: relative;
+
+  @media print {
+    p, blockquote, li {
+      page-break-inside: avoid;
+    }
+  }
+}
+
+article header .container,
+article [role*="main"] .container,
+article footer .container {
+  @include section-offset;
+}
+
+/*--- Article Header ---*/
+
+article header {
+  padding-top: $base-spacing-unit-extra-large;
+}
+
+/*--- Article Main ---*/
+
+article [role*="main"] {
+  padding: $base-spacing-unit-small 0;
+}
+
+/*--- Article Footer ---*/
+
+article footer {
+
+  /* Print Styles */
+
+  @media print {
+    display: none;
+  }
+}

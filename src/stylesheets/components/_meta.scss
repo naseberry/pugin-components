@@ -1,0 +1,5 @@
+.meta {
+  @include border-top;
+  @include border-bottom;
+  padding: $base-container-unit-small 0;
+}

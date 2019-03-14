@@ -1,0 +1,318 @@
+/*--- List Core Settings ---*/
+
+ul, ol {
+  padding: 0 0 0 $base-spacing-unit-large;
+  li {
+    padding: 0;
+  }
+}
+dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  word-break: break-word;
+}
+
+/*--- List Base Settings ---*/
+
+.list {
+  @include list;
+  @include list-headings;
+}
+
+.list--deep {
+  > li {
+    @include block--deep;
+  }
+}
+
+/*--- List Block Options ---*/
+
+.list--block {
+  @include list--block;
+}
+
+.list--block__deep {
+  @include list--block;
+  li {
+    @include block--deep;
+  }
+}
+
+/*--- List Pipe Options ---*/
+
+.list--pipe {
+  @include list--pipe;
+}
+
+.list--pipe__deep {
+  @include list--pipe;
+  li {
+    @include block--deep;
+  }
+}
+
+/*--- List Inline Options ---*/
+
+.list--inline {
+  @include list--inline;
+}
+
+/*--- List Column Options ---*/
+
+.list--2 {
+  @include list--2;
+}
+
+section:not([class*="section--wide"] ) .list--3 {
+  // Default two column list within narrow container
+  @include col--2;
+
+  // Targets the last row within lists
+  @media (min-width: $medium) and (max-width: $extra-large - 1) {
+    @include last-row(2);
+  }
+  @media (min-width: $extra-large) {
+    @include last-row(2);
+  }
+}
+
+.section--wide .list--3 {
+  @include col--3;
+  @media (min-width: $medium) and (max-width: $large - 1) {
+    @include last-row(2);
+  }
+  @media (min-width: $large) {
+    @include last-row(3);
+  }
+}
+
+/*--- List Definition ---*/
+
+dl {
+  @include list--definition;
+}
+
+/*--- List Events ---*/
+
+.list--events {
+  @include list;
+}
+
+.list--events > li {
+  margin-bottom: 0;
+
+  @include media($medium) {
+    @include flex(33.333%, 66.666%);
+    align-items: flex-start;
+    border-top: 1px solid $grey-3;
+  }
+
+  &:last-child {
+    @include media($medium) {
+      @include border-bottom;
+    }
+  }
+
+  > ol,
+  > ul {
+    @include media($medium) {
+      padding-left: $base-spacing-unit-large;
+    }
+  }
+
+  > .list--pipe {
+    @include media($medium) {
+      margin-top: -1px;
+      margin-bottom: -1px;
+    }
+  }
+}
+
+/*--- List Tab ---*/
+
+.list--tab {
+  @include list--inline;
+  @include border-bottom;
+
+  li {
+    margin-bottom: 0;
+    margin-right: $base-spacing-unit-medium;
+  }
+  li.active {
+    @include typography--heavy;
+    padding: ($base-spacing-unit + 2) 0;
+    border-bottom: 4px solid $purple;
+  }
+  a, span {
+    display: block;
+    position: relative;
+    padding: ($base-spacing-unit-tiny / 2) $base-spacing-unit-tiny;
+  }
+  a {
+    padding: ($base-spacing-unit + 2) 0;
+  }
+}
+
+/*--- List Alpha/Numerical Options ---*/
+
+.list--number, .list--roman, .list--alpha {
+  @include list;
+  @include list-headings;
+  li {
+    display: list-item;
+    margin-left: $base-spacing-unit-large;
+  }
+}
+
+.list--number {
+  list-style-type: decimal;
+}
+
+.list--roman {
+  list-style-type: lower-roman;
+}
+
+.list--alpha {
+  list-style-type: lower-alpha;
+}
+
+/*--- Default Nested Lists [ul/ol] ---*/
+
+// List style for <ul> tags without any classes, nested
+// inside elements with class `.list--{{modifier}}` or
+// <ol> tags.
+
+[class*="list"], ol {
+  ul:not([class*=list]) {
+    list-style-type: disc;
+    > li {
+      margin-left: 0;
+    }
+    ul:not([class*=list]) {
+      list-style-type: circle;
+      ul:not([class*=list]) {
+        list-style-type: square;
+      }
+    }
+  }
+}
+
+/*--- Component Lists ---*/
+
+aside .list--pipe li {
+  margin: 0 $base-spacing-unit-small;
+  &:first-child {
+    border-top: 0;
+  }
+  &:last-child {
+    border-bottom: 0;
+  }
+  &.active {
+    padding-right: $base-spacing-unit-small;
+    padding-left: $base-spacing-unit-small;
+    margin: -1px 0 0;
+  }
+}
+
+article [role='main'] {
+  li {
+    list-style: none;
+    &:before {
+      content: '';
+      display: inline-block;
+      position: relative;
+      color: $white;
+      font-weight: 500;
+      text-align: center;
+      background-color: $deep-purple;
+    }
+  }
+  ul {
+    > li {
+      margin: $base-spacing-unit-tiny 0;
+      &:before {
+        top: -2px;
+        left: -$base-spacing-unit-tiny;
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        margin-left: -8px;
+      }
+    }
+  }
+  ol {
+    padding-left: ($base-spacing-unit-extra-large + $base-spacing-unit-small);
+    > li {
+      counter-increment: item;
+      margin: $base-spacing-unit-medium 0;
+      &:before {
+        content: counter(item);
+        left:        -($base-spacing-unit-medium + 2);
+        width:        ($base-spacing-unit-large - 2);
+        height:       ($base-spacing-unit-large - 2);
+        line-height:  ($base-spacing-unit-large - 2);
+        margin-left: -($base-spacing-unit-large - 2);
+      }
+
+      > ul {
+        margin-top: $base-spacing-unit-medium;
+        margin-bottom: $base-spacing-unit-medium;
+      }
+    }
+  }
+
+  /* Print Styles */
+
+  @media print {
+    ul > li, ol > li {
+      &:before {
+        content: none;
+      }
+    }
+    ul > li {
+      list-style-type: disc;
+    }
+    ol > li {
+      list-style-type: decimal;
+    }
+  }
+}
+
+footer .list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.status--banner ul li {
+  margin-bottom: 0;
+}
+
+/*--- Dropdown styles ---*/
+
+.dropdown aside {
+  ol, ul {
+    @include list;
+    @include milli;
+    margin-right: -($base-spacing-unit-small);
+    margin-left: -($base-spacing-unit-small);
+    @include media($small) {
+      column-count: 2;
+      column-gap: 0;
+    }
+  }
+  li {
+    /* Stops <li> tags from leaking into the next column */
+    break-inside: avoid-column;
+    margin-bottom: 0;
+  }
+}
+
+.utilities {
+  @include list;
+  @include typography--heavy;
+}
+
+article aside ol {
+  @include list--block;
+}

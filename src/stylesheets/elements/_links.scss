@@ -1,0 +1,193 @@
+a {
+  @include links(
+    $link, 				      // a:link colour
+    underline,		      // a:link decoration
+    $link-visited, 			// a:visited color
+    $link-hover 		    // a:hover color
+  );
+  &:active, &:focus {
+    color: $deep-purple;
+    text-decoration: none;
+  }
+  &:active {
+    background-color: transparent;
+    outline: none;
+  }
+  &:focus {
+   background-color: $mint;
+   outline: 3px solid $mint;
+ }
+}
+
+/*--- Footer ---*/
+
+body > footer a  {
+  @include links(
+    $grey-5, 		        // a:link colour
+    underline,	        // a:link decoration
+    $grey-5, 		        // a:visited color
+    $grey-3 		        // a:hover color
+  );
+  &:focus {
+    color: $deep-purple;
+    text-decoration: none;
+  }
+}
+
+/*--- Search ---*/
+
+// This is a toggle for the search bar on mobile. We're using
+// an <a> tag so that if JavaScript is disabled, the link will
+// redirect to the search page as a fallback.
+header form + a {
+  top: $base-spacing-unit;
+  right: 0;
+  width: 57px;
+  height: 50px;
+  position: absolute;
+  background-color: $deep-purple;
+  padding: $base-spacing-unit $base-spacing-unit-small;
+
+  @include media(0, $medium - 1) {
+    display: inline;
+  }
+  @include media($medium) {
+    display: none;
+  }
+
+  &:after {
+    display: none;
+  }
+  &:hover, &:focus, &:active {
+    background-color: transparent;
+    outline: none;
+
+    svg[data-icon="search"] g {
+      fill: $grey-3;
+    }
+    svg[data-icon="close"] g {
+      stroke: $grey-3;
+    }
+  }
+}
+
+/*--- Maps ---*/
+
+.map .leaflet-bar a {
+  background-color: $grey-5;
+  @include links(
+    $link, 			        // a:link colour
+    none, 			        // a:link decoration
+    $link, 			        // a:visited color
+    inherit 	        // a:hover color
+  );
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:first-child {
+    @include border-bottom;
+  }
+}
+
+/*--- Navigation Letter & Number ---*/
+
+.navigation--letter,
+.navigation--number {
+  li a {
+    &:link {
+      padding: ($base-spacing-unit + 3px) 0;
+      @include media($medium) {
+        padding: $base-spacing-unit 0;
+      }
+      background-color: $white;
+      color: $link;
+      text-decoration: none;
+    }
+    &:hover {
+      color: $white;
+      background-color: $link;
+    }
+  }
+}
+
+/*--- Navigation Letter/Main/Number ---*/
+
+.navigation--letter li a,
+.navigation--number li a {
+  display: block;
+}
+
+/*--- Navigation Number Controls ---*/
+
+.navigation-control {
+  &:link {
+    min-width: ($base-spacing-unit * 14);
+    text-align: center;
+    text-decoration: none;
+    background-color: $white;
+    padding: ($base-spacing-unit + 3px) $base-spacing-unit-small;
+    @include media($medium) {
+      padding: $base-spacing-unit $base-spacing-unit-small;
+    }
+    margin-right: ($base-spacing-unit / 2);
+  }
+  &:hover {
+    color: $white;
+    background-color: $link;
+  }
+}
+
+/*--- Themes Alternative Focus ---*/
+
+.theme--mint,
+.theme--warning,
+.theme--success {
+  a:focus {
+    background: $grey-5;
+    outline: 3px solid $grey-5;
+  }
+}
+
+/*--- hint decoration ---*/
+
+[class*="hint"][class*="theme--"] a:link {
+  text-decoration: none;
+}
+
+/*--- Toggle styles ---*/
+
+.dropdown aside li a {
+  display: block;
+  text-decoration: none;
+  padding: $base-spacing-unit $base-spacing-unit-small;
+  outline: none;
+  &:hover {
+    color: $white;
+    background-color: $link;
+  }
+  &:active {
+    color: $deep-purple;
+    background-color: $mint;
+  }
+}
+
+/*--- Figure ---*/
+
+figure a :hover {
+  opacity: 0.8;
+}
+
+/*--- Component Specific ---*/
+
+article aside h2 a {
+  @include typography--heavy;
+}
+
+
+/*--- List link wrapping ---*/
+
+dd a {
+  word-break: break-word;
+}

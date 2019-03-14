@@ -1,0 +1,76 @@
+/*--- Typography Settings ---*/
+
+body {
+  @include epsilon;
+}
+
+p {
+  margin: 0 0 $base-spacing-unit-small 0;
+}
+
+small, .milli {
+  @include milli;
+  color: $grey-2;
+  font-weight: 400;
+}
+
+b {
+  font-weight: normal;
+}
+
+.micro {
+  color: $grey-2;
+  @include micro;
+}
+
+.lead {
+  @include fontsize(21);
+  line-height: 1.286; // 27px
+  margin-bottom: $base-spacing-unit-small;
+  @include media($medium) {
+    @include fontsize(24);
+    line-height: 1.5; // 30px
+    margin-bottom: $base-spacing-unit-medium;
+  }
+  .hero & {
+    margin-top: $base-spacing-unit-extra-large;
+  }
+}
+
+h1 + .lead {
+  margin-top: -$base-spacing-unit-tiny;
+}
+
+/*--- Typography  Options ---*/
+
+.typography--light {
+  @include typography--light;
+}
+.typography--heavy {
+  @include typography--heavy;
+}
+
+/*--- Settings for url & hint ---*/
+
+.hint {
+  @include milli;
+}
+
+[class*="list"] .url {
+  @include milli;
+}
+
+/*--- Settings for primary--section subheadings ---*/
+
+.section--primary small,
+article header small {
+  @include delta;
+  display: inline-block;
+  margin-bottom: $base-spacing-unit;
+}
+
+/*--- Card ---*/
+
+.card h2 b {
+  font-weight: 500;
+}
